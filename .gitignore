@@ -8,6 +8,7 @@
 # testing
 /coverage
 
+
 # production
 /build
 
@@ -17,6 +18,9 @@
 .env.development.local
 .env.test.local
 .env.production.local
+.idea
+juks.zip
+package-lock.json
 
 npm-debug.log*
 yarn-debug.log*
