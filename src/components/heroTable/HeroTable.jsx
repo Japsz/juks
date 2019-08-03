@@ -1,9 +1,9 @@
 import React from 'react';
 import Hero from './Hero';
-import store from '../../store/store';
-const {Consumer} = store;
+import {connect} from "react-redux";
 
-const HeroTable = () => {
+const HeroTable = props => {
+  const {heroList} = props
     return (
         <table className={'characters-table'}>
             <thead>
@@ -15,16 +15,17 @@ const HeroTable = () => {
             </tr>
             </thead>
             <tbody>
-            <Consumer>
                 {
-                    value => value.map((objeto, indice) =>
+                    heroList.map((objeto, indice) =>
                         <Hero key={indice} obj={objeto}/>
                     )
                 }
-            </Consumer>
             </tbody>
         </table>
     );
 }
+const mapStateToProps = state => ({
+  heroList: state.Heros.list
+})
 
-export default HeroTable
+export default connect(mapStateToProps,null)(HeroTable)

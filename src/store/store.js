@@ -1,5 +1,6 @@
-import {createContext} from 'react';
+import {createStore, applyMiddleware} from "redux"
+import thunk from 'redux-thunk'
+import logger from 'redux-logger'
+import reducer from "./rootReducer"
 
-const {Provider, Consumer} = createContext();
-
-export default {Provider, Consumer};
+export default createStore(reducer,applyMiddleware(thunk, logger));

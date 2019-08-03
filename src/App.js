@@ -1,16 +1,19 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {Provider} from "react-redux";
+import store from './store/store'
 
-import Index from './components/views/heroIndex';
-
+import Index from './views/index';
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route exact path={'/'} component={Index} />
-      </Switch>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <Switch>
+          <Route path={'/'} component={Index}/>
+        </Switch>
+      </Router>
+    </Provider>
   );
 }
 

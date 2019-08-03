@@ -1,0 +1,16 @@
+ul{
+    width:50%;
+    padding:5%;
+}
+li{
+    margin: 10% 0 10% 0;
+    color: aliceblue;
+}
+.selected{
+    background-color: #61dafb;
+    color: #282c34;
+}
+.none{
+    font-size: larger;
+    font-weight: bolder;
+}

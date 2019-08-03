@@ -1,0 +1,12 @@
+.nav{
+    height: 10%;
+    background-color: #282c34;
+    align-content: center;
+    justify-content: center;
+}
+.nav-item{
+    font-size: large;
+    font-family: "Cooper Black";
+    color: lightgoldenrodyellow;
+    margin: 5% 0 0 20%;
+}
